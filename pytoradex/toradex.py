@@ -201,7 +201,7 @@ class ToradexSensor(HIDSensor):
         else: return None
 
     def _debug(self):
-        return sensor._debug_str().format(sensor.get_data()))
+        return sensor._debug_str().format(sensor.get_data())
         
     def __str__(self):
         return 'Generic Python interface to Toradex OAK sensors'
