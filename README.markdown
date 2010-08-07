@@ -116,6 +116,7 @@ than creating a Python object for each one, you can use the
     print(collection.open())
     while True:
         collection._debug() # Will print output of each sensor in turn.
+		time.sleep(1)
 
 
 ---------------------------------------
