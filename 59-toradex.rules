@@ -1,0 +1,24 @@
+ACTION!="add", GOTO="toradex_rules_end"
+
+# Current sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0009", MODE="666"
+# Magnetometer
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="000b", MODE="666"
+# IR motion sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0006", MODE="666"
+# Distance sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0005", MODE="666"
+# Tilt sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0004", MODE="666"
+# Lux (light) sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0003", MODE="666"
+# Accelerometer
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="000a", MODE="666"
+# Temperature and relative humidity sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0001", MODE="666"
+# Pressure sensor
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="0002", MODE="666"
+# 8 channel A2D
+ATTRS{idVendor}=="1b67", ATTRS{idProduct}=="000e", MODE="666" 
+
+LABEL="toradex_rules_end"
