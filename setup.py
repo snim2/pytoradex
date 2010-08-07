@@ -25,8 +25,8 @@ Please read the README for more details.
       include_package_data=True,
       zip_safe=True,
       install_requires=[
-        'setuptools',
-        'hid'
+        'setuptools'
+        # 'hid' NOT IN CHEESE SHOP!
       ],
       entry_points="""
       # -*- Entry points: -*-
