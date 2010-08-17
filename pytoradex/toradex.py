@@ -200,7 +200,7 @@ class ToradexSensor(HIDSensor):
         if bytes: return bytes
         else: return None
 
-    def _debug(self):
+    def debug(self):
         return sensor._debug_str().format(sensor.get_data())
         
     def __str__(self):
@@ -590,7 +590,7 @@ def __test(sensorclass):
     print(sensor.open())
     while True:
         sensor.blink_led()
-        print(sensor._debug())
+        print(sensor.debug())
 
 def __test_rh(): __test(ToradexRH)
 def __test_g(): __test(ToradexG)
@@ -609,7 +609,7 @@ def __test_collection(n=10):
     print(collection.open())
     while n>0:
         time.sleep(0.1)
-        collection._debug()
+        collection.debug()
         n -= 1
     del collection
 

@@ -103,7 +103,7 @@ our debug utilities to do this:
     accel.open()
     accel.blink_led()
     while True:
-        print(accel._debug())
+        print(accel.debug())
 	
 
 If you have a bunch of Oak sensors connected to the USB bus, rather
@@ -117,7 +117,7 @@ than creating a Python object for each one, you can use the
     collection = ToradexSensorCollection()
     print(collection.open())
     while True:
-        collection._debug() # Will print output of each sensor in turn.
+        collection.debug() # Will print output of each sensor in turn.
         time.sleep(1)
 
 
