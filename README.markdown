@@ -62,23 +62,23 @@ readings:
 
 
     from pytoradex.toradex import ToradexLux
-	import time
+    import time
     
-	numreadings = 100
-	lux = ToradexLux()
-	try:
-	    lux.open()
-
-    	    # Turn the LED on to indicate a change of state.
-	    lux.led_on()
-	    readings = [lux.get_lux() for i in xrange(numreadings)]
-	    lux.led_off()
-	    lux.close()
+    numreadings = 100
+    lux = ToradexLux()
+    try:
+        lux.open()
+        
+        # Turn the LED on to indicate a change of state.
+        lux.led_on()
+        readings = [lux.get_lux() for i in xrange(numreadings)]
+        lux.led_off()
+        lux.close()
             
-	    print 'Average light level: {0}'.format(sum(readings)/numreadings)
+        print 'Average light level: {0}'.format(sum(readings)/numreadings)
 
-	except:
-	    print 'Cannot open Oak Lux sensor. Please check USB cables.'
+    except:
+        print 'Cannot open Oak Lux sensor. Please check USB cables.'
     
 
 
@@ -99,11 +99,11 @@ our debug utilities to do this:
 
     from pytoradex.toradex import ToradexG
 	
-	accel = ToradexG()
-	accel.open()
-	accel.blink_led()
-	while True:
-	    print(accel._debug())
+    accel = ToradexG()
+    accel.open()
+    accel.blink_led()
+    while True:
+        print(accel._debug())
 	
 
 If you have a bunch of Oak sensors connected to the USB bus, rather
