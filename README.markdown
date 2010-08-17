@@ -68,16 +68,18 @@ readings:
 	lux = ToradexLux()
 	try:
 	    lux.open()
+
+    	    # Turn the LED on to indicate a change of state.
+	    lux.led_on()
+	    readings = [lux.get_lux() for i in xrange(numreadings)]
+	    lux.led_off()
+	    lux.close()
+            
+	    print 'Average light level: {0}'.format(sum(readings)/numreadings)
+
 	except:
 	    print 'Cannot open Oak Lux sensor. Please check USB cables.'
     
-	# Turn the LED on to indicate a change of state.
-	lux.led_on()
-	readings = [lux.get_lux() for i in xrange(numreadings)]
-	lux.led_off()
-	lux.close()
-    
-	print 'Average light level: {0}'.format(sum(readings)/numreadings)
 
 
 Every Oak sensor has the following methods which control the red LED
@@ -110,13 +112,13 @@ than creating a Python object for each one, you can use the
 
 
     import time
-	from pytoradex.toradex import ToradexSensorCollection
+    from pytoradex.toradex import ToradexSensorCollection
 	
     collection = ToradexSensorCollection()
     print(collection.open())
     while True:
         collection._debug() # Will print output of each sensor in turn.
-		time.sleep(1)
+        time.sleep(1)
 
 
 ---------------------------------------
