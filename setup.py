@@ -23,7 +23,7 @@ Please read the README for more details.
       license='GPL2',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
-      zip_safe=True,
+      zip_safe=False,
       install_requires=[
         'setuptools'
         # 'hid' NOT IN CHEESE SHOP!
